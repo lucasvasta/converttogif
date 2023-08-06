@@ -1,45 +1,55 @@
-# Script para Cortar Vídeo e Criar GIF
+**MP4 to GIF Converter**
 
-Este é um script em Python que permite cortar um vídeo e criar um GIF animado a partir do trecho selecionado. Ele utiliza a biblioteca `moviepy` para manipular o vídeo e gerar o GIF.
+This project is a simple Python script that allows you to convert MP4 videos to GIF animations. The script provides a user-friendly interface to select the input MP4 file, choose the time range for video cropping (optional), and specify the desired filename for the output GIF.
 
-## Pré-requisitos
+**Requirements**
 
-Certifique-se de ter o Python instalado em sua máquina. Além disso, instale a biblioteca `moviepy` executando o seguinte comando:
+- Python 3.x
+- FFmpeg (for video conversion)
+- ImageMagick (for GIF creation)
 
-```
-pip install moviepy
-```
+**Installation**
 
-## Como Usar
+1. Install Python 3.x from the official Python website: https://www.python.org/downloads/
 
-1. Clone este repositório ou faça o download do arquivo `cortar_video_e_criar_gif.py`.
+2. Install FFmpeg:
+   - Windows: Download FFmpeg from https://www.ffmpeg.org/download.html and add it to your system's PATH.
+   - macOS: Install FFmpeg using Homebrew with the command: `brew install ffmpeg`
+   - Linux: Install FFmpeg using your package manager (e.g., `sudo apt install ffmpeg` on Ubuntu)
 
-2. Coloque o vídeo que deseja cortar na mesma pasta do script.
+3. Install ImageMagick:
+   - Windows: Download ImageMagick from https://imagemagick.org/script/download.php#windows and add it to your system's PATH.
+   - macOS: Install ImageMagick using Homebrew with the command: `brew install imagemagick`
+   - Linux: Install ImageMagick using your package manager (e.g., `sudo apt install imagemagick` on Ubuntu)
 
-3. Abra um terminal ou prompt de comando na pasta onde o script está localizado.
+4. Clone or download this repository to your local machine.
 
-4. Execute o seguinte comando para executar o script:
+**Usage**
 
-```
-python cortar_video_e_criar_gif.py
-```
+1. Run the `mp4_to_gif_converter.py` script using Python.
 
-5. O script solicitará o nome do arquivo de vídeo (por exemplo, `video.mp4`) e os momentos inicial e final que você deseja cortar (em segundos).
+2. The script will open a file dialog for you to select the input MP4 file.
 
-6. Após a execução do script, o GIF animado será criado e salvo na mesma pasta do vídeo original, com o nome `output.gif`.
+3. If you want to crop the video, the script will prompt you to enter the start and end times (in seconds) for the time range. If you want to convert the entire video without cropping, simply leave both input fields blank.
 
-## Observações
+4. After video conversion and cropping (if applicable), the script will open another dialog to enter the desired filename for the output GIF.
 
-- O script utiliza a biblioteca `moviepy` para manipular o vídeo e criar o GIF. Caso deseje, você pode modificar o código para ajustar o tamanho do GIF, a duração ou outras configurações.
+5. The GIF will be created and saved in the specified output folder. The filename will be in the format 'upsell_(numero).gif', where `(numero)` represents the next available sequence number in the output folder.
 
-- Verifique a licença do vídeo que você está utilizando para garantir que você tenha permissão para cortá-lo e criar um GIF.
+**Note**
 
-- Certifique-se de ter espaço suficiente em disco para armazenar o vídeo original, o trecho cortado e o GIF gerado.
+Please ensure you have read and write permissions for the input MP4 file and the output folder.
 
-## Contribuição
+**Contributing**
 
-Se você encontrar algum problema ou tiver sugestões de melhorias para o script, fique à vontade para abrir um "issue" ou enviar um "pull request". Sua contribuição será muito apreciada!
+Contributions to this project are welcome! Feel free to open issues or submit pull requests on the GitHub repository.
 
-## Licença
+**License**
 
-Este script é licenciado sob a [MIT License](LICENSE). Sinta-se à vontade para usar, modificar e distribuir conforme as disposições da licença.
+This project is licensed under the [MIT License](https://opensource.org/licenses/MIT). Feel free to use, modify, and distribute it as per the terms of the license.
+
+**Acknowledgments**
+
+This project was inspired by the need to convert MP4 videos to GIF animations quickly and easily. Special thanks to the developers of FFmpeg and ImageMagick for their amazing tools that make this conversion possible.
+
+If you have any questions or suggestions, please don't hesitate to contact us. Happy video to GIF converting!
