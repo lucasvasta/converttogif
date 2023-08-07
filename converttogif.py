@@ -52,9 +52,12 @@ def get_next_sequence_number(output_folder):
 
 def create_gif_from_image_sequence(image_folder, output_folder, filename, fps=10):
     try:
+        # Get the next available sequence number
+        sequence_number = get_next_sequence_number(output_folder)
+
         # Use ImageMagick to create GIF from the image sequence with the specified filename
         output_gif_path = os.path.join(output_folder, f'{filename}.gif')
-        imagemagick_command = f'magick -delay {100 // fps} {image_folder}/frame-*.png "{output_gif_path}"'
+        imagemagick_command = f'magick -delay {100 // fps} "{image_folder}/frame-*.png" "{output_gif_path}"'
         subprocess.check_output(imagemagick_command, shell=True)
 
         print("GIF creation successful!")
